@@ -5,6 +5,11 @@
 **Project Overview**
 
 
+Interesting read on the in-depth logic flow of the subject
+
+
+https://medium.com/@nichomaabane46/optimizing-starbucks-offers-with-data-science-a-technical-deep-dive-110090e6d4bd
+
 The Starbucks Capstone Challenge aims to analyze customer interactions with various promotional offers to understand which demographic groups respond best to which types of offers. The goal is to develop a predictive model to determine customer engagement with offers, optimize marketing strategies, and maximize revenue.
 
 # Problem we are solving for:
