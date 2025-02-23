@@ -1,20 +1,51 @@
-
-
 # Starbucks Capstone Challenge: Customer Offer Response Analysis
 
 **Project Overview**
 
-
-Interesting read on the in-depth logic flow of the subject
-
-
+ intersting read on the in-depth solution and flow of the project
 https://medium.com/@nichomaabane46/optimizing-starbucks-offers-with-data-science-a-technical-deep-dive-110090e6d4bd
 
 The Starbucks Capstone Challenge aims to analyze customer interactions with various promotional offers to understand which demographic groups respond best to which types of offers. The goal is to develop a predictive model to determine customer engagement with offers, optimize marketing strategies, and maximize revenue.
 
+# Starbucks Capstone Project: Library Dependencies
+
+Below is the list of Python libraries used in this project, along with their primary purposes:
+
+## Core Libraries
+- **pandas**  
+  - Data manipulation and analysis. Used for reading JSON files, handling missing values, feature engineering, and merging datasets.
+
+- **numpy**  
+  - Numerical operations and array handling. Supported data transformations and mathematical computations.
+
+- **matplotlib**  
+  - Static visualizations (e.g., bar charts, histograms). Created plots for EDA and model performance evaluation.
+
+- **seaborn**  
+  - Enhanced visualizations (e.g., heatmaps, distribution plots). Improved readability of EDA charts.
+
+## Machine Learning & Preprocessing
+- **scikit-learn (sklearn)**  
+  - **preprocessing**: Encoded categorical variables (e.g., `LabelEncoder`, `OneHotEncoder`).  
+  - **model_selection**: Split data into train/test sets (`train_test_split`) and tuned hyperparameters (`GridSearchCV`).  
+  - **ensemble**: Trained the `RandomForestClassifier` model.  
+  - **metrics**: Evaluated performance using `accuracy_score`, `f1_score`, `roc_auc_score`, and generated classification reports.  
+  - **impute**: Handled missing values (not heavily used due to dataset completeness).
+
+## Utilities
+- **joblib**  
+  - Saved and loaded trained models for reuse (e.g., `joblib.dump` and `joblib.load`).
+
+
+## Installation
+To install all dependencies, run:  
+
+pip install pandas numpy matplotlib seaborn scikit-learn joblib
+
 # Problem we are solving for:
 
 **The problem we are solving is to determine which demographic groups respond best to which types of offers on the Starbucks rewards mobile app**
+
     - Understand how different customer demographics (e.g., age, gender, income) interact with various types of offers
     - Determine which offers are most effective for specific customer segments.
     - Build a predictive model to forecast whether a customer will respond to a specific offer based on their demographic and transactional history.
@@ -48,6 +79,8 @@ Portfolio.json: Contains details about promotional offers, including type (bogo,
 Profile.json: Contains demographic information about customers, including age, gender, income, and membership start date.
 
 Transcript.json: Logs customer interactions with offers and transactions, including offer received, viewed, completed, and transaction amounts.
+
+# Process followed to accomplish model
 
 Data Preprocessing & Feature Engineering
 
@@ -101,6 +134,7 @@ Discount offers had the highest completion rates.
 
 Informational offers had no recorded completions, indicating that they may not directly lead to transactions.
 
+
 # Predictive Modeling
 
 Target Variable
@@ -138,6 +172,7 @@ Addressing Class Imbalance
 
 Instead of SMOTE, class weighting was used to balance the dataset, ensuring the model gives more importance to minority class instances.
 
+
 # Conclusion & Business Insights
 
 **Demographic Targeting:**
@@ -167,3 +202,6 @@ Refine feature engineering by exploring customer behavioral patterns in more dep
 A/B test marketing strategies by sending different offers to targeted groups based on insights.
 
 This analysis provides Starbucks with actionable insights on customer behavior, enabling more effective marketing strategies tailored to different demographic groups.
+
+github link to the notebook
+https://github.com/NichoMaabane/starbucks_capstone
